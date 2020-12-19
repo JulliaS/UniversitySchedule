@@ -6,6 +6,7 @@ import Groups from './components/Group/Groups';
 import Rooms from './components/Room/Rooms';
 import Subjects from './components/Subject/Subjects';
 import Teachers from './components/Teacher/Teachers';
+import Schedules from './components/Schedule/Schedule';
 import './custom.css'
 
 export default () => (
@@ -14,7 +15,7 @@ export default () => (
             <Route exact path='/admin' component={AdminPanel} />
             <Route exact path="/faculties" component={Faculties} />
             <Route exact path="/rooms" component={Rooms} />
-        
+            <Route exact path="/schedules" component={Schedules} />
             <Route path="/faculties/:id/groups" component={Groups} />
             <Route path="/faculties/:id/teachers" component={Teachers} />
             <Route path="/faculties/:id/subjects" component={Subjects} />
