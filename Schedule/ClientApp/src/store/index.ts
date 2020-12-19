@@ -3,7 +3,6 @@ import * as Groups from './Groups';
 import * as Rooms from './rooms';
 import * as Subjects from './Subjects';
 import * as Teachers from './Teachers';
-import * as Schedules from './Schedules';
 
 // The top-level state object
 export interface ApplicationState {
