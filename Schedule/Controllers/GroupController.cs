@@ -30,7 +30,9 @@ namespace Schedule.Controllers
 
         [HttpGet("{id}/with/properties")]
         public async Task<Group> GetGroupById(int id, [FromQuery] string[] property) => await _groupUnitOfWork.Repository.GetWithIncludeById(id, property);
-       
+        [HttpGet("groups/{facultyId}")]
+        public async Task<IEnumerable<Group>> GetGroupsByFacultyId(int facultyId) => await _groupUnitOfWork.Repository.FindByCondition(group => group.FacultyId == facultyId);
+  
         [HttpPost]
         public async Task<Group> AddGroup([FromBody] Group group)
         {
