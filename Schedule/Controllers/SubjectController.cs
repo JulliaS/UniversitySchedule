@@ -29,8 +29,7 @@ namespace Schedule.Controllers
 
         [HttpGet("{id}/with/properties")]
         public async Task<Subject> GetSubjectById(int id, [FromQuery] string[] property) => await _subjectUnitOfWork.Repository.GetWithIncludeById(id, property);
-        [HttpGet("subjects/{facultyId}")]
-        public async Task<IEnumerable<Subject>> GetSubjectsByFacultyId(int facultyId) => await _subjectUnitOfWork.Repository.FindByCondition(subject => subject.FacultyId == facultyId);
+      
         [HttpPost]
         public async Task<Subject> AddSubject([FromBody] Subject subject)
         {

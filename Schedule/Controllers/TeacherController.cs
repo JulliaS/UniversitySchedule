@@ -29,8 +29,7 @@ namespace Schedule.Controllers
 
         [HttpGet("{id}/with/properties")]
         public async Task<Teacher> GetTeacherById(int id, [FromQuery] string[] property) => await _teacherUnitOfWork.Repository.GetWithIncludeById(id, property);
-        [HttpGet("teachers/{facultyId}")]
-        public async Task<IEnumerable<Teacher>> GetTeachersByFacultyId(int facultyId) => await _teacherUnitOfWork.Repository.FindByCondition(teacher => teacher.FacultyId == facultyId);
+       
         [HttpPost]
         public async Task<Teacher> AddTeacher([FromBody] Teacher teacher)
         {

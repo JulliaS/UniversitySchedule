@@ -72,10 +72,7 @@ namespace Schedule
             var query = Include(includeProperties);
             return await query.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
-        public async Task<IEnumerable<T>> FindByCondition(Expression<Func<T,bool>> expression)
-        {
-            return await entities.Where(expression).AsNoTracking().ToListAsync();
-        }
+       
         private IQueryable<T> Include(params string[] properties)
         {
             Expression<Func<T, object>>[] includeProperties = new Expression<Func<T, object>>[properties.Length];
