@@ -15,7 +15,7 @@ const Faculties = () => {
     const facultiesData = useSelector<ApplicationState, FacultiesStore.FacultiesState>(state => state.faculties);
     const dispatch = useDispatch();
 
-    const [currentId, setCurrentId] = React.useState<number>(0)
+    const [currentId, setCurrentId] = React.useState<number>(0);
 
     React.useEffect(() => {
         dispatch(FacultiesStore.GetAll())
@@ -25,7 +25,7 @@ const Faculties = () => {
 
     const onDelete = (id: number) => {
         dispatch(FacultiesStore.Delete(id,
-            () => addToast("Deleted successfully", { appearance: 'info' })))
+            () => addToast("Видалено успішно", { appearance: 'info' })))
     }
 
     return (
@@ -37,7 +37,6 @@ const Faculties = () => {
                     alignItems="baseline">
 
                     <FacultyForm {...({ currentId, setCurrentId })} />
-
 
                     <TableContainer>
                         <Table>
@@ -66,17 +65,17 @@ const Faculties = () => {
                                             </TableCell>
                                             <TableCell>
                                                 <Button>
-                                                    <Link to={`/faculties/${faculty.id}/groups`}>Групи</Link>
+                                                    <Link to={`/faculties/${faculty.id}/groups`}>Гpупи</Link>
                                                 </Button>
                                             </TableCell>
                                             <TableCell>
                                                 <Button>
-                                                    <Link to={`/faculties/${faculty.id}/teachers`}>Викладачі</Link>
+                                                    <Link to={`/faculties/${faculty.id}/teachers`}>Bикладачі</Link>
                                                 </Button>
                                             </TableCell>
                                             <TableCell>
                                                 <Button>
-                                                    <Link to={`/faculties/${faculty.id}/subjects`}>Предмети</Link>
+                                                    <Link to={`/faculties/${faculty.id}/subjects`}>Пpедмети</Link>
                                                 </Button>
                                             </TableCell>
                                         </TableRow>)

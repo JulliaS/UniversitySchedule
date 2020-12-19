@@ -26,7 +26,7 @@ const Teachers = ({ match }: RouteComponentProps<TParams>) => {
 
     const onDelete = (id: number) => {
         dispatch(TeachersStore.Delete(id,
-            () => addToast("Deleted successfully", { appearance: 'info' })))
+            () => addToast("Видалено успішно", { appearance: 'info' })))
     }
 
     React.useEffect(() => {

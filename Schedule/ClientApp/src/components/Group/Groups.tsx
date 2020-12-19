@@ -26,7 +26,7 @@ const Groups = ({ match }: RouteComponentProps<TParams>) => {
 
     const onDelete = (id: number) => {
         dispatch(GroupsStore.Delete(id,
-            () => addToast("Deleted successfully", { appearance: 'info' })))
+            () => addToast("Видалено успішно", { appearance: 'info' })))
     }
 
     React.useEffect(() => {

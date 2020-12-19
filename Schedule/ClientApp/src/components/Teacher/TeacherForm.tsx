@@ -44,7 +44,7 @@ export const TeacherForm = (props: PropsType) => {
 
             reset();
             props.setCurrentId(0)
-            addToast("Submitted successfully", { appearance: 'success' })
+            addToast("Додано успішно", { appearance: 'success' })
         }
         if (props.currentId === 0) {
             dispatch(TeachersStore.Create({ ...values, facultyId: currentFaculty?.id }, onSuccess));
@@ -71,25 +71,25 @@ export const TeacherForm = (props: PropsType) => {
                 <div>
 
                     <input name="firstName" id="Facname_input" ref={register}></input>
-                    {errors.firstName && <p>This field is required</p>}
+                    {errors.firstName && <p>Це поле є необхідним</p>}
                 </div>
                 <label id="FacName">Ім'я</label>
                 <div>
 
                     <input name="lastName" id="Facname_input" ref={register}></input>
-                    {errors.lastName && <p>This field is required</p>}
+                    {errors.lastName && <p>Це поле є необхідним</p>}
                 </div>
                 <div id="buttns">
                     <div>
                         <Button id="submit" type="submit" color="primary" variant="contained">
-                            Submit
+                            Додати
                     </Button>
                     </div>
                     <div>
                         <Button
                             variant="contained"
                             onClick={() => { reset(); props.setCurrentId(0) }}
-                        >Reset</Button>
+                        >Скинути</Button>
                     </div>
                 </div>
             </div>

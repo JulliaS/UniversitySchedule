@@ -42,7 +42,7 @@ export const GroupForm = (props: PropsType) => {
 
             reset();
             props.setCurrentId(0)
-            addToast("Submitted successfully", { appearance: 'success' })
+            addToast("Додано успішно", { appearance: 'success' })
         }
         if (props.currentId === 0) {
             dispatch(GroupsStore.Create({ ...values, facultyId: currentFaculty?.id }, onSuccess));
@@ -67,19 +67,19 @@ export const GroupForm = (props: PropsType) => {
                 <div>
 
                     <input name="name" id="Facname_input" ref={register}></input>
-                    {errors.name && <p>This field is required</p>}
+                    {errors.name && <p>Це поле є необхідним</p>}
                 </div>
                 <div id="buttns">
                     <div>
                         <Button id="submit" type="submit" color="primary" variant="contained">
-                            Submit
+                            Додати
                     </Button>
                     </div>
                     <div>
                         <Button
                             variant="contained"
                             onClick={() => { reset(); props.setCurrentId(0) }}
-                        >Reset</Button>
+                        >Скинути</Button>
                     </div>
                 </div>
             </div>

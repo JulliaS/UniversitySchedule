@@ -24,7 +24,7 @@ const Rooms = () => {
 
     const onDelete = (id: number) => {
         dispatch(RoomsStore.Delete(id,
-            () => addToast("Deleted successfully", { appearance: 'info' })))
+            () => addToast("Видалено успішно", { appearance: 'info' })))
     }
 
     return (
