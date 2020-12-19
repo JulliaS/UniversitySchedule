@@ -7,6 +7,14 @@ namespace Schedule.Models
 {
     public class Schedule : BaseEntity
     {
+        public int NumberDay {get; set;}
+        public int TeacherId { get; set; }
+        public int SubjectId { get; set; }
+        public int RoomId { get; set; }
+        public int LessonId { get; set; }
+        public int GroupId { get; set; }
+        public int SemesterId { get; set; }
+        public int AvailabilityId { get; set; }
         public Teacher Teacher { get; set; }
         public Subject Subject { get; set; }
         public Room Room { get; set; }
